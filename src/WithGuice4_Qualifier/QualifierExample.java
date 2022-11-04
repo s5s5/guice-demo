@@ -65,7 +65,7 @@ final class Owner {
   // 1. 用于构造函数，表示这个构造函数是被Guice管理的，Guice会自动调用这个构造函数
   // 2. 用于成员变量，表示这个成员变量是被Guice管理的，Guice会自动注入这个成员变量
   @Inject
-  Owner(@CarBenz Car car) {
+  Owner(@CarBenz Car car) { // 通过 @CarBenz 来标记这个 car 是 Benz 类型的
     // Provider 是 Guice 提供的接口，用于延迟创建对象
     // 通过 Provider.get() 方法可以获取对象
     this.car = car;
